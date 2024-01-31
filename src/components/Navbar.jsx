@@ -24,8 +24,8 @@ const Navbar = ({ setCategory , setCountry}) => {
             <li className="nav-item">
               <div className="nav-link" onClick={() => setCategory("entertainment")}>Entertainment</div>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <li className="nav-item dropdown">
+              <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Country
               </a>
               <ul className="dropdown-menu">
@@ -34,6 +34,7 @@ const Navbar = ({ setCategory , setCountry}) => {
                 <li><div className="dropdown-item" onClick={() => setCountry("ca")}>Canada</div></li>
                 <li><div className="dropdown-item" onClick={() => setCountry("in")}>India</div></li>
                 <li><div className="dropdown-item" onClick={() => setCountry("de")}>Germany</div></li>
+                <li><div className="dropdown-item" onClick={() => setCountry("us")}>USA</div></li>
               </ul>
             </li>
           </ul>

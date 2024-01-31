@@ -1,5 +1,5 @@
 import axios from "axios"
-import { useEffect } from "react"
+import { Fragment, useEffect } from "react"
 import { useState } from "react"
 import NewsItem from "./NewsItem"
 
@@ -18,10 +18,11 @@ const NewsBoard = ({ category, country }) => {
   return (
     <div className="container">
       <h2 className="text-center">Latest <span className="badge bg-danger">News</span></h2>
-      {
+      <div className="text-center">{
         articles.map((news, index) => <NewsItem key={index} title={news.title}
           description={news.description} src={news.urlToImage} url={news.url} />)
       }
+      </div>
     </div>
   )
 }
