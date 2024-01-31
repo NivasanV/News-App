@@ -1,5 +1,5 @@
 
-const Navbar = ({setCategory}) => {
+const Navbar = ({ setCategory , setCountry}) => {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
       <div className="container-fluid">
@@ -23,6 +23,18 @@ const Navbar = ({setCategory}) => {
             </li>
             <li className="nav-item">
               <div className="nav-link" onClick={() => setCategory("entertainment")}>Entertainment</div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Country
+              </a>
+              <ul className="dropdown-menu">
+                <li><div className="dropdown-item" onClick={() => setCountry("jp")}>Japan</div></li>
+                <li><div className="dropdown-item" onClick={() => setCountry("cn")}>China</div></li>
+                <li><div className="dropdown-item" onClick={() => setCountry("ca")}>Canada</div></li>
+                <li><div className="dropdown-item" onClick={() => setCountry("in")}>India</div></li>
+                <li><div className="dropdown-item" onClick={() => setCountry("de")}>Germany</div></li>
+              </ul>
             </li>
           </ul>
         </div>

@@ -3,17 +3,17 @@ import { useEffect } from "react"
 import { useState } from "react"
 import NewsItem from "./NewsItem"
 
-const NewsBoard = ({ category }) => {
+const NewsBoard = ({ category, country }) => {
 
   const [articles, setArticles] = useState([])
 
   useEffect(() => {
-    let url = `https://newsapi.org/v2/top-headlines?country=in&category=${category}&apiKey=69e039ee7d874f48a2bb57a43920bc03`
+    let url = `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=69e039ee7d874f48a2bb57a43920bc03`
     axios.get(url).then((res) => {
       console.log(res.data.articles)
       setArticles(res.data.articles)
     })
-  }, [category])
+  }, [category, country])
 
   return (
     <div className="container">
